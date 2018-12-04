@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+
+public class Aufgabenblatt8 
+{
+
+	public static void main(String[] args) 
+	{
+		double zahl1= 47.025;
+		double zahl2= -1.4;
+		double zahl3= 0.903;
+		System.out.println("Anfangszahl1: "+zahl1 + "\n" +"Ergebnis1:     "+ GebrochenerAnteil1(zahl1));
+		System.out.println("Anfangszahl2: "+zahl2 + "\n" +"Ergebnis2:    "+ GebrochenerAnteil1(zahl2));		
+		System.out.println("Anfangszahl3: "+zahl3 + "\n" +"Ergebnis3:    "+ GebrochenerAnteil1(zahl3));
+	}
+	
+	public static double GebrochenerAnteil1(double wert) 
+	{
+		boolean wertIstNegativ = false;
+		if(wert < 0) 
+		{
+			wertIstNegativ = true;
+			wert = wert*-1.0;
+		}
+		
+		while(wert >1) 
+		{
+			wert = wert-1.0;
+		}
+		
+		if(wertIstNegativ) 
+		{
+			wert = wert*-1.0;
+		}
+		
+		 wert = Math.round(wert*1000)/1000.0; // Probiere es auch ohne dieses runden aus! Damit du siehst was passiert.
+		
+		return wert;
+	}
+}
