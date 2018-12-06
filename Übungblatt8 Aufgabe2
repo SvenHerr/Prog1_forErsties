@@ -13,7 +13,7 @@ public class Stars
 		System.out.println("Bitte Anzahl der Sterne eingeben: ");
 		int sterne = scan.nextInt();
 	
-		if(zahl <= 0 || sterne <= 0) 
+		if(zahl <= 0 || sterne < 0) 
 		{
 			System.out.println("Fehler! Zahl und Anzahl Sterne muss > 0 sein ");
 			
