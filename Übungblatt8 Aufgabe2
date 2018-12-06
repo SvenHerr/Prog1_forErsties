@@ -21,17 +21,20 @@ public class Stars
 		{
 			while(zahl != 0)
 			{
-				temp = zahl%10; 
-				zahl = zahl - temp; 
-				zahl = zahl / 10;
+								//Beispielzahl: 345
+				temp = zahl%10; 		// temp = 5
+				zahl = zahl - temp; 		// 345 - 5 = 340 
+				zahl = zahl / 10; 		// 340/10 = 34
 				
 				System.out.print(temp); 
-				int zahl1 = zahl%10;
+				int zahl1 = zahl%10;		// 
 				
-				if(zahl1 != 0)
-				for(int i = 0; i<sterne; i++) 
+				if(zahl1 != 0) 			// Abfrage wird benötigt damit am ende keine sterne mehr kommen
 				{
-					System.out.print("°"); 
+					for(int i = 0; i<sterne; i++) 
+					{
+						System.out.print("°"); 
+					}
 				}
 			}
 		}
