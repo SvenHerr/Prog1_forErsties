@@ -14,7 +14,7 @@ public class ArithmetischeWert
 		if(werteeingabe <= 0)
 		{
 			System.out.println("Fehlerhafte Eingabe");
-			return;						// was willst du hier machen?
+			return;						
 		}
 		double[]zahlen=new double[werteeingabe];
 		for(int i = 0; i <werteeingabe; i++)
