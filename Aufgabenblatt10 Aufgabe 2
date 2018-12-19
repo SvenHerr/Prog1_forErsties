@@ -2,7 +2,7 @@ public class Blatt10Aufgabe2A
 {
 	public static void main(String []args) 
 	{
-		if(args[0].length() == 0 && args[1].length() == 0) 
+		if(args.length() == 0) 
 		{
 			System.out.println("Keine Werte eingegeben");
 		}
@@ -10,7 +10,7 @@ public class Blatt10Aufgabe2A
 		{
 			System.out.println("Erstes Feld ist leer");
 		}
-		else if(args[1].length() == 0)
+		else if(args.lenght != 2 || args[1].length() == 0)
 		{
 			System.out.println("Zweites Feld ist leer");
 		}else 
