@@ -1,6 +1,6 @@
 public class Blatt10Aufgabe2A 
 {
-	public Blatt10Aufgabe2A(String []args) 
+	public static void main(String []args) 
 	{
 		if(args[0].length() == 0 && args[1].length() == 0) 
 		{
