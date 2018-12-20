@@ -14,23 +14,24 @@ public class Hangman
 	{
 		// Wähle zufälliges Wort und ermittle dessen Länge
 		String word = RandomWord();
-		int laenge = word.length();
-		playHangman(laenge, word);
+		//int laenge = word.length();
+		playHangman(word);
 	}
 
-	private void playHangman(int laenge, String word) 
+	private void playHangman(String word) 
 	{
+		char wordArray[] = word.toCharArray();
 		// initiere counter der durchgegänge
 		// missedLetters zählt die noch fehlenden Buchstaben
-		int counter = 0, missedLetters = laenge;
+		int counter = 0, missedLetters = wordArray.length;
 		Scanner read = new Scanner(System.in);
 		// /guesses speichert die erratenen Buchstaben
-		char[] guesses = initGuesses(laenge);
+		char[] guesses = initGuesses(wordArray.length);
 
 		while (counter < 15 && missedLetters > 0) 
 		{
 			char letter = readFromConsole(read);
-			for (int i = 0; i < laenge; i++) 
+			for (int i = 0; i < wordArray.length; i++) 
 			{
 				// sucht den Buchstaben im Wort und schreibt an entsprechende
 				// Stelle in guesses
@@ -46,14 +47,14 @@ public class Hangman
 		
 		System.out.println("");
 		
-		char wordArray[] = word.toCharArray();
+		
 		Boolean youWin = false;
 		for(int i = 0; i<word.length(); i++) 
 		{
 			if(wordArray[i] == guesses[i]) 
 			{
-				
 				youWin = true;
+				
 			}else 
 			{
 				
