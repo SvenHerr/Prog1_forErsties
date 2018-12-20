@@ -1,0 +1,70 @@
+
+import java.util.Scanner;
+public class Hangman {
+public static void main(String[] args) 
+{
+	
+Hangman h=new Hangman();
+h.start();
+}
+
+
+	public void start() {
+// Wähle zufälliges Wort und ermittle dessen Länge
+		String word = RandomWord();
+		int laenge = word.length();
+		playHangman(laenge, word);
+	}
+
+	private void playHangman(int laenge, String word) {
+// initiere counter der durchgegänge
+// missedLetters zählt die noch fehlenden Buchstaben
+		int counter = 0, missedLetters = laenge;
+		Scanner read = new Scanner(System.in);
+// /guesses speichert die erratenen Buchstaben
+		char[] guesses = initGuesses(laenge);
+
+		while (counter < 15 && missedLetters > 0) {
+			char letter = readFromConsole(read);
+			for (int i = 0; i < laenge; i++) {
+// sucht den Buchstaben im Wort und schreibt an entsprechende
+// Stelle in guesses
+				if (Character.toUpperCase(letter) == Character.toUpperCase(word.charAt(i))) {
+					guesses[i] = word.charAt(i);
+					--missedLetters;
+				}
+			}
+			System.out.print(1 + counter++ + ". Versuch: ");
+			System.out.println(guesses);
+		}
+		read.close();
+	}
+
+	private char[] initGuesses(int laenge) {
+		char[] guesses = new char[laenge];
+		for (int i = 0; i < laenge; guesses[i++] = '-')
+			;
+		System.out.println(guesses);
+		return guesses;
+	}
+
+	private char readFromConsole(Scanner read) {
+		char response = 10;
+// lese solange bis eine sinnvolle Eingabe gemacht wurde
+// damit wird die Leere Eingabe verhindert.
+		do {
+			try {
+				response = read.nextLine().charAt(0);
+			} catch (Exception e) {
+				System.out.println("Bitte Buchstaben eingeben!");
+			}
+		} while (response == 10);
+		return response;
+	}
+
+	public String RandomWord() {
+		String[] words = { "programmiersprache" };
+		int n = (int) (Math.random() * words.length - 1);
+		return words[n];
+	}
+}
