@@ -2,7 +2,6 @@ public class Aufgabe5
 {
 	public static void main(String[] args) 
 	{
-		
 		float zahl = 5.432342f;
 		
 		float rund1 = (int)(zahl*100);
@@ -10,6 +9,5 @@ public class Aufgabe5
 		float rund = rund1/100.0f;
 		
 		System.out.println(rund + "\t"+2);
-		
 	}
 }
