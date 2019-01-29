@@ -43,7 +43,6 @@ public class ArithmetischeWert
 		sc.close();
 	}
 	
-	
  	public static double standAb(double[] zahlen, double arthmittel)
  	{
  		double abweichung=0;
