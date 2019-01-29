@@ -1,7 +1,6 @@
 
 public class Blatt9Aufgabe1A 
 {
-
 	public static void main(String[] args) 
 	{
 		int anfang[] = new int[6];
