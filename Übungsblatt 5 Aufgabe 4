@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Aufgabe4 
+{	
+	public static void main(String[] args) 
+	{
+		//Primzahlen sind nur durch sich selbst und durch 1 ganzzahlig teilbar!
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Bitte zu untersuchende Zahl eingeben:");
+		int eingabezahl = scan.nextInt();
+		scan.close();
+		boolean prim = true;
+			
+		for (int i = 2; 2*i < eingabezahl; i++)  
+		{
+			if ((eingabezahl % i) == 0 )
+			{
+				prim = false ;
+				break ;
+			}
+		}
+		if (prim == false)
+		{
+			System.out.println("Untersuchte Zahl ist keine Primzahl!");
+		}
+		else
+		{ 
+			System.out.println("Untersuchte Zahl ist eine Primzahl!");
+		}				
+	}	
+}
