@@ -22,7 +22,6 @@ public class Aufgabenblatt7
 		scanFloat = scanner.nextFloat();
 		System.out.println(roundNumber(scanFloat)); 
 		
-		
 		// Aufgabe 2b
 		System.out.println("Bitte Zahl eingeben: ");
 		scanFloat = scanner.nextFloat();
@@ -36,7 +35,6 @@ public class Aufgabenblatt7
 	// Kann man vllt bisschen einfacher lösen
 	public static double roundNumber(double zahl)  // hier könntest du eigentlich auch einen int zurück geben
 	{
-		
 		int result = 0;
 		double zahlAnfang = zahl; // einfach nur speichern damit wir am ende schauen können ob die Zahl negativ war oder nicht.
 		
