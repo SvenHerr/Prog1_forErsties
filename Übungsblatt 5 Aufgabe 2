@@ -1,0 +1,27 @@
+package prog1;
+
+public class Reihenberechnung {
+
+	public static void main(String[] args) 
+	{
+		double summe = 0;
+		double summand;
+		double summand2;
+		int k = 1;
+		
+		do
+		{
+			summand =6*(1.0/Math.pow(k, 2));
+			summe = summe + summand;
+			k++;
+			summand2 = 6*(1.0/Math.pow(k, 2));
+		}
+		
+		while( summand2 >= 1E-5 );
+		
+			System.out.println(summe);
+
+
+	}
+
+}
